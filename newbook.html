@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+     crossorigin="anonymous">
+     <link rel="stylesheet" href="css/home.css">
+     <link rel="stylesheet" href="css/newbook.css">
+
+     <link rel="stylesheet" href="css/font-awesome.min.css"><!-- icons -->
+
+    <title> New Book page</title>
+
+    
+</head>
+<body>
+   
+   <!-- header -->
+   <nav class="navbar navbar-expand-lg navbar-light  bg-white header">
+
+    <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/download (1).webp" alt="logo" class="img"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link main-page page-scroll" href="home.html"  style="color:#122c77;"> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link infopage" href="newpatient.html"  > Regist </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link why-us" href="newbook.html"> Book </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link why-us" href="last visit.html">Prescriptions</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link contact-us" href="calender.html"> Calender</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link infopage" href="#" id="logout"> Logout </a>
+                  </li>
+              </ul>
+             
+            </div>
+    </div>
+</nav>
+<section class="calender">
+  <div class="container">
+    <br><hr>
+
+    <div class="row">
+        <div class="col offset-md-1">
+            <form id="form_create_appointment">
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label class="required">Date</label>
+                        <input class="form-control date-input" type="date" id="date" data-trigger="hover" data-toggle="popover" title="Date" data-content="You can select any date from today clicking on the number in the calendar" required>
+                    </div>
+                    <div class="col form-group">
+                        <label>Description</label>
+                        <input class="form-control" type="text" id="description">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label class="required">Start Time</label>
+                        <input class="form-control time-input" type="time" id="start_time" required>
+                    </div>
+                    <div class="col form-group">
+                        <label class="required">End Time</label>
+                        <input class="form-control time-input" type="time" id="end_time" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col form-group">
+                        <button type="button" class="btn btn-success btn-block" id="clear" onclick="clear_input()">Clear Form</button>
+                    </div>
+                    <div class="col form-group">
+                        <button type="button" class="btn btn-primary btn-block" id="submit" onclick="Javascript:addRow()" >Make Appointment</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="mydata">
+            <b>Your Appointment ...</b>
+            <table class=" table-success" id="myTableData"  border="1" cellpadding="5">
+                <tr >
+                    <td>&nbsp;</td>
+                    <td><b>Date</b></td>
+                    <td><b>Description</b></td>
+                    <td><b>Start Time</b></td>
+                    <td><b>End Time</b></td>
+                </tr>
+            </table>
+            &nbsp;
+            
+      </div>
+    </div>
+    <br><br><br>
+    
+</div>
+  </div>
+  
+          
+   
+
+     
+</section>
+  
+  <!-- script links -->
+ 
+   <script src="js/newbook.js"></script>
+</body>
+
+</html>
